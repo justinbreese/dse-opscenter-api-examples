@@ -1,7 +1,12 @@
 # dse-opscenter-api-examples
-Working with the DataStax OpsCenter API is actually really simple. The location of the API documentation can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_repository.html
+Working with the DataStax LCM OpsCenter API is actually really simple. The location of the LCM API documentation can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_repository.html
 
 Likewise, I have also created some quick examples that you can use here.
+
+# easiest API call
+To do the easiest API call, go to http://<IP-address-of-OpsCenter>:8888/api/v2/lcm/datacenters
+![alt text](https://raw.githubusercontent.com/justinbreese/dse-opscenter-api-examples/master/results.png)
+* You will notice that this will output a ton of stuff on the datacenters within your cluster
 
 # enable-nodesync.py
 This is a quick example on how to enable nodesync on specific keyspaces and/or tables.
@@ -34,10 +39,12 @@ Within OpsCenter LCM, you submit a job, but you want to see if it is finished or
 Create a repo that you want the nodes to download DSE from. You can use this to use your DataStax Academy credentials.
 
 # create-config_profile.py
-Configuration profiles are important so you know how what settings the cluster, DCs, and nodes are configured to.
+Configuration profiles are important so you know how what settings the cluster, DCs, and nodes are configured to. Here you can configure changes in dse.yaml, cassandra.yaml, etc.
 
 # run-job.py
-Jobs are used to configure or install nodes, DCs, or the cluster. Be sure to modify the `job-type` and the `job-scope` as needed for the job that you are trying to do. 
+Jobs are used to configure or install nodes, DCs, or the cluster. Be sure to modify the `job-type` and the `job-scope` as needed for the job that you are trying to do.
 
 # the end
 There you go! Some quick and dirty API examples. For some more advanced examples, checkout one of my other repos which uses the OpsCenter API to setup a multi-cloud DSE cluster: https://github.com/justinbreese/dse-multi-cloud-demo/setup.py
+
+Full reference to the LCM API can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_overview.html#lcm-overview
