@@ -1,15 +1,10 @@
 import os
-import sys
 import requests
 import json
-import threading
-import argparse
-import subprocess
-import webbrowser
-import time
 
-server_ip = "54.202.212.179"
-cluster_name = "jbreese-killrvideo"
+server_ip = "18.236.149.183"
+cluster_name = "jbreese-yup"
+
 base_api_url = 'http://'+server_ip+':8888/'
 opscenter_session = os.environ.get('opscenter_session', '')
 
@@ -23,6 +18,6 @@ def update_nodesync(url, cluster_name, post_data):
 
 update_nodesync("/nodesync", cluster_name,
                     {
-                      'enable': ['dse_analytics.*', 'dse_leases.*', 'dse_perf.*', 'dse_security.*', 'dse_system.*', 'dse_system_local.*', 'dsefs.*', 'HiveMetaStore.*', 'OpsCenter.*', 'solr_admin.*', 'system_auth.*', 'system_distributed.*', 'system_traces.*']
+                      'enable': ['dse_analytics.*', 'dse_leases.*', 'dse_perf.*', 'OpsCenter.*', 'solr_admin.*']
                     }
 )

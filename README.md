@@ -1,5 +1,5 @@
 # dse-opscenter-api-examples
-Working with the DataStax OpsCenter API is actually really simple. The location of the API documentation can be found here: https://docs.datastax.com/en/opscenter/6.1/api/docs/index.html
+Working with the DataStax OpsCenter API is actually really simple. The location of the API documentation can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_repository.html
 
 Likewise, I have also created some quick examples that you can use here.
 
@@ -29,6 +29,15 @@ In the example, I have created an array of keyspaces that I want to all be updat
 # job-listener.py
 Within OpsCenter LCM, you submit a job, but you want to see if it is finished or if it failed. That is what this code does. Bonus: while it waits for the job to complete, it will serenade you!
 * Fill out the `server_ip` and `job_id` variables for what you are listening for
+
+# create-repo.py
+Create a repo that you want the nodes to download DSE from. You can use this to use your DataStax Academy credentials.
+
+# create-config_profile.py
+Configuration profiles are important so you know how what settings the cluster, DCs, and nodes are configured to.
+
+# run-job.py
+Jobs are used to configure or install nodes, DCs, or the cluster. Be sure to modify the `job-type` and the `job-scope` as needed for the job that you are trying to do. 
 
 # the end
 There you go! Some quick and dirty API examples. For some more advanced examples, checkout one of my other repos which uses the OpsCenter API to setup a multi-cloud DSE cluster: https://github.com/justinbreese/dse-multi-cloud-demo/setup.py
