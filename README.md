@@ -1,5 +1,5 @@
 # dse-opscenter-api-examples
-Working with the DataStax LCM OpsCenter API is actually really simple. The location of the LCM API documentation can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_repository.html
+Working with the DataStax LCM OpsCenter API is actually really simple. The location of the LCM API documentation can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_overview.html
 
 Likewise, I have also created some quick examples that you can use here.
 
@@ -47,4 +47,4 @@ Jobs are used to configure or install nodes, DCs, or the cluster. Be sure to mod
 # the end
 There you go! Some quick and dirty API examples. For some more advanced examples, checkout one of my other repos which uses the OpsCenter API to setup a multi-cloud DSE cluster: https://github.com/justinbreese/dse-multi-cloud-demo/setup.py
 
-Full reference to the LCM API can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_overview.html#lcm-overview
+Full reference to the LCM API can be found here: https://docs.datastax.com/en/opscenter/6.7/api/docs/lcm_overview.html
