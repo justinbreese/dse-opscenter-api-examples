@@ -4,7 +4,7 @@ Working with the DataStax LCM OpsCenter API is actually really simple. The locat
 Likewise, I have also created some quick examples that you can use here.
 
 # easiest API call
-To do the easiest API call, go to http://<IP-address-of-OpsCenter>:8888/api/v2/lcm/datacenters
+To do the easiest API call, go to http://IP-address-of-OpsCenter:8888/api/v2/lcm/datacenters
 ![alt text](https://raw.githubusercontent.com/justinbreese/dse-opscenter-api-examples/master/results.jpg)
 * You will notice that this will output a ton of stuff on the datacenters within your cluster
 
