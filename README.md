@@ -27,7 +27,7 @@ In the example, I have created an array of keyspaces that I want to all be updat
 * The code will iterate through the `keyspaces` array and update each keyspace as described above
 
 # job-listener.py
-Say you submit a job but you want to see if it is finished or if it failed. Well, look no further! Also, why it waits for the job to complete, it will serenade you.
+Within OpsCenter LCM, you submit a job, but you want to see if it is finished or if it failed. That is what this code does. Bonus: while it waits for the job to complete, it will serenade you!
 * Fill out the `server_ip` and `job_id` variables for what you are listening for
 
 # the end
