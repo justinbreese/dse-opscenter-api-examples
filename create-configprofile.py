@@ -2,10 +2,11 @@ import os
 import requests
 import json
 
-server_ip = "18.236.149.183"
+server_ip = "35.160.153.226"
+cluster_name = "testing123"
+
 base_url = 'http://%s:8888/api/v2/lcm/' % server_ip
 opscenter_session = os.environ.get('opscenter_session', '')
-cluster_name = "testing123"
 
 def do_post(url, post_data):
     result = requests.post(base_url + url,
@@ -27,4 +28,9 @@ cluster_profile_response = do_post("config_profiles/",
 	                 								}
 					 				},
 	             },
-	     "comment": 'LCM provisioned as %s' % cluster_name})
+	     "comment": 'LCM provisioned as %s' % cluster_name}
+)
+
+cluster_profile_id = cluster_profile_response['id']
+
+print "\ncluster_profile_id: " +cluster_profile_id

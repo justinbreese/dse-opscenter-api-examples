@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-server_ip = "18.236.149.183"
+server_ip = "35.160.153.226"
 cluster_name = "jbreese-yup"
 
 base_api_url = 'http://'+server_ip+':8888/'

@@ -3,9 +3,8 @@ import requests
 import json
 
 server_ip = "35.160.153.226"
-username = "foo"
-password = "bar"
-repo_desc = "Foobar Repo"
+data_center = "DC1"
+cluster_id = "0c4a4d93-b481-43f3-8218-3a586559772d" #put the ID from the output of create-cluster.py script here
 
 base_url = 'http://%s:8888/api/v2/lcm/' % server_ip
 opscenter_session = os.environ.get('opscenter_session', '')
@@ -18,13 +17,13 @@ def do_post(url, post_data):
     result_data = json.loads(result.text)
     return result_data
 
-# setup the repository for where you want to download DSE from
-repository_response = do_post("repositories/",
-    {"name": repo_desc,
-        "username": username,
-        "password": password,})
+make_dc_response = do_post("datacenters/",
+	        {"name": data_center,
+	         "cluster-id": cluster_id,
+	         "solr-enabled": True,
+	         "spark-enabled": True,
+	         "graph-enabled": True}
+			 )
+dc_id = make_dc_response['id']
 
-# get the id of the repo that you just created, if you want to...
-repository_id = repository_response['id']
-
-print "\nrepository_id: " +repository_id
+print "\ndc_id: " + dc_id

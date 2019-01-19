@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-server_ip = "18.236.149.183"
+server_ip = "35.160.153.226"
 cluster_name = "jbreese-yup"
 base_api_url = 'http://'+server_ip+':8888/'
 opscenter_session = os.environ.get('opscenter_session', '')
@@ -21,7 +21,7 @@ for keyspace in keyspaces:
     update_keyspace(cluster_name, keyspace,
         {
         "strategy_class": "org.apache.cassandra.locator.NetworkTopologyStrategy",
-        "strategy_options": {"onprem" : "3", "AWS" : "3", "Azure" : "3", "GCP" : "3"},
+        "strategy_options": {"AWS" : "3", "Azure" : "3", "GCP" : "3"},
         "durable_writes": True
         }
     )
